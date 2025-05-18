@@ -20,9 +20,32 @@
         }
         
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
-            height: 500px;
-            color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('img/hero-bg.jpg') center/cover no-repeat !important;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+@keyframes zoomEffect {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    animation: zoomEffect 20s infinite alternate;
+    z-index: -1;
+}
         }
         
         .navbar {
@@ -108,6 +131,35 @@
             display: none;
             z-index: 99;
         }
+
+       
+.parallax-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    position: relative;
+    color: white !important;
+}
+
+
+#modeller {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('img/models-bg.jpg');
+}
+
+
+#karsilastirma {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('img/comparison-bg.jpg');
+}
+
+
+#hakkimizda {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('img/about-bg.jpg');
+}
     </style>
 </head>
 <body>
@@ -133,16 +185,20 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link active" href="index.html"><span class="menu-text">Ana Sayfa</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#modeller"><span class="menu-text">Modeller</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#karsilastirma"><span class="menu-text">Karşılaştırma</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#hakkimizda"><span class="menu-text">Hakkımızda</span></a>
-                        </li>
+                        </li><!-- Modeller Bölümü -->
+<section id="modeller" class="parallax-section">
+    <!-- İçerik aynı kalacak -->
+</section>
+
+<!-- Karşılaştırma Bölümü -->
+<section id="karsilastirma" class="parallax-section">
+    <!-- İçerik aynı kalacak -->
+</section>
+
+<!-- Hakkımızda Bölümü -->
+<section id="hakkimizda" class="parallax-section">
+    <!-- İçerik aynı kalacak -->
+</section>
                         <li class="nav-item">
                             <a class="nav-link" href="iletisim.html"><span class="menu-text">İletişim</span></a>
                         </li>
