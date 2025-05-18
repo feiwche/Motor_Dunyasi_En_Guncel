@@ -7,6 +7,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        .contact-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('img/contact-bg.jpg') center/cover no-repeat !important;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
         :root {
             --primary-color: #0056b3;
             --secondary-color: #e62e2d;
@@ -107,6 +115,17 @@
         .custom-radio, .custom-checkbox {
             margin-right: 1rem;
         }
+        @media (max-width: 768px) {
+    /* Parallax efektini mobilde kapat */
+    .parallax-section {
+        background-attachment: scroll !important;
+    }
+    
+    /* Hero metni boyutları */
+    .hero-section h1 {
+        font-size: 2.5rem !important;
+    }
+}
     </style>
 </head>
 <body>
