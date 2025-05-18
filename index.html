@@ -699,6 +699,16 @@
                 }
             );
         });
+
+document.addEventListener('mousemove', (e) => {
+    const layers = document.querySelectorAll('.parallax-section');
+    layers.forEach(layer => {
+        const speed = 5; 
+        const x = (window.innerWidth - e.pageX * speed) / 100;
+        const y = (window.innerHeight - e.pageY * speed) / 100;
+        layer.style.backgroundPosition = `${x}px ${y}px`;
+    });
+});
     </script>
 </body>
 </html>
